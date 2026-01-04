@@ -1,0 +1,148 @@
+<Intro1>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: (0.07,0.07,0.09,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.parent.height * 0.8
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            Label:
+                text: "📝"
+                font_size: "80sp"
+                color: (0.5,0.4,1,1)
+            Label:
+                text: "UpTodo"
+                font_size: "48sp"
+                color: 1,1,1,1
+                bold: True
+        Button:
+            text: "Get Started"
+            size_hint: (0.8, None)
+            height: "50dp"
+            pos_hint: {"center_x": 0.5}
+            background_color: (0.5,0.4,1,1)
+            color: 1,1,1,1
+            on_press: app.sm.current = "intro2"
+
+<Intro2>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: (0.07,0.07,0.09,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.parent.height * 0.7
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            Label:
+                text: "Manage your tasks"
+                font_size: "32sp"
+                color: 1,1,1,1
+                halign: "center"
+            Label:
+                text: "Organize and track your daily tasks effortlessly"
+                font_size: "18sp"
+                color: (0.7,0.7,0.7,1)
+                halign: "center"
+        BoxLayout:
+            size_hint_y: None
+            height: "60dp"
+            spacing: "20dp"
+            pos_hint: {"center_x": 0.5}
+            Button:
+                text: "SKIP"
+                size_hint_x: 0.4
+                background_color: (0.2,0.2,0.25,1)
+                color: (0.7,0.7,0.7,1)
+                on_press: app.sm.current = "todo"
+            Button:
+                text: "NEXT"
+                size_hint_x: 0.4
+                background_color: (0.5,0.4,1,1)
+                color: 1,1,1,1
+                on_press: app.sm.current = "intro3"
+
+<Intro3>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: (0.07,0.07,0.09,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.parent.height * 0.7
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            Label:
+                text: "Create daily routine"
+                font_size: "32sp"
+                color: 1,1,1,1
+                halign: "center"
+            Label:
+                text: "Build habits with daily task routines"
+                font_size: "18sp"
+                color: (0.7,0.7,0.7,1)
+                halign: "center"
+        BoxLayout:
+            size_hint_y: None
+            height: "60dp"
+            spacing: "20dp"
+            pos_hint: {"center_x": 0.5}
+            Button:
+                text: "SKIP"
+                size_hint_x: 0.4
+                background_color: (0.2,0.2,0.25,1)
+                color: (0.7,0.7,0.7,1)
+                on_press: app.sm.current = "todo"
+            Button:
+                text: "NEXT"
+                size_hint_x: 0.4
+                background_color: (0.5,0.4,1,1)
+                color: 1,1,1,1
+                on_press: app.sm.current = "intro4"
+
+<Intro4>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: (0.07,0.07,0.09,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.parent.height * 0.7
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            Label:
+                text: "Organize your tasks"
+                font_size: "32sp"
+                color: 1,1,1,1
+                halign: "center"
+            Label:
+                text: "Categorize and prioritize your to-dos"
+                font_size: "18sp"
+                color: (0.7,0.7,0.7,1)
+                halign: "center"
+        Button:
+            text: "Get Started"
+            size_hint: (0.8, None)
+            height: "60dp"
+            pos_hint: {"center_x": 0.5}
+            background_color: (0.5,0.4,1,1)
+            color: 1,1,1,1
+            on_press: app.sm.current = "todo"

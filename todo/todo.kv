@@ -1,0 +1,53 @@
+<Todo>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: "16dp"
+        spacing: "12dp"
+        canvas.before:
+            Color:
+                rgba: (0.1,0.1,0.13,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "My Tasks"
+            font_size: "28sp"
+            color: 1,1,1,1
+            size_hint_y: None
+            height: "60dp"
+            bold: True
+
+        ScrollView:
+            GridLayout:
+                id: task_list
+                cols: 1
+                spacing: "10dp"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: "0dp", "0dp", "0dp", "80dp"  # Space for bottom bar
+
+        BoxLayout:
+            size_hint_y: None
+            height: "60dp"
+            spacing: "10dp"
+            pos_hint: {"bottom": 1}
+
+            TextInput:
+                id: task_input
+                hint_text: "Add a new task..."
+                multiline: False
+                background_color: (0.2,0.2,0.25,1)
+                foreground_color: 1,1,1,1
+                hint_text_color: (0.5,0.5,0.5,1)
+                padding: "15dp", "15dp"
+                font_size: "18sp"
+
+            Button:
+                text: "+"
+                font_size: "28sp"
+                size_hint_x: None
+                width: "60dp"
+                background_color: (0.5,0.4,1,1)
+                color: 1,1,1,1
+                on_press: app.add_task(task_input.text)

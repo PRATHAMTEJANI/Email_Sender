@@ -11,6 +11,7 @@ for pos in range(1,len(var)):
     place += "_"
 print(place)
 
+
 display = ""
 print("enter a worlds tocheck you are win or not")
 num = input("Guess the word").lower()
